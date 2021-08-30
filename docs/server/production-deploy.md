@@ -68,7 +68,7 @@ Every shard is low contention by design and it is very difficult to oversubscrib
 With that said, here are some guidelines to some common bottlenecks:
 
 - **Database**. The vast majority of the time the database will be the bottleneck. **We highly recommend setting alerts on `ScheduleToStart` latency** to look out for this. Also check if your database connection getting saturated.
-- **Internal services**. The next layer will be scaling the 4 internal services of Temporal ([Frontend, Matching, History, and Worker](https://docs.temporal.io/docs/server-architecture/)). Monitor each accordingly. The Frontend service is more CPU bound, whereas the History and Matching services require more memory.
+- **Internal services**. The next layer will be scaling the 4 internal services of Temporal ([Frontend, Matching, History, and Worker](/docs/content/what-is-the-temporal-server)). Monitor each accordingly. The Frontend service is more CPU bound, whereas the History and Matching services require more memory.
 - See the **Server Limits** section below for other limits you will want to keep in mind when doing system design, including event history length.
 - [Multi-Cluster Replication](https://docs.temporal.io/docs/server/multi-cluster/) is an experimental feature you can explore for heavy reads.
 
@@ -159,7 +159,7 @@ Topics this document will cover in future: (for now, please search/ask on the fo
 
 ## Further Reading
 
-Understanding the [Temporal Server architecture](https://docs.temporal.io/docs/server-architecture/) can help you debug and troubleshoot production deployment issues.
+Understanding the [Temporal Server architecture](/docs/content/what-is-the-temporal-server) can help you debug and troubleshoot production deployment issues.
 
 ## External Runbooks
 
